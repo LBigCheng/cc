@@ -12,6 +12,25 @@
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+    <style>
+    .bigbtn{
+        margin:5px
+    }
+    .panel-title a{
+        margin:20px;
+    }
+    .breadcrumb> li + li:before{
+        content:">";
+    }
+    </style>
+
+    <SCRIPT>
+        $(document).ready(function () {
+            $("#aaa").load("couer.php");
+        });
+
+    </SCRIPT>
+
 </head>
 
 <body>
@@ -25,7 +44,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">輔導個案管理</a>
+            <a class="navbar-brand" href="index.html">輔導個案管理</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -59,16 +78,16 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">值班管理</a>
+                            <a href="GP_1.html">值班管理</a>
                         </li>
                         <li>
-                            <a href="#">人員簡介</a>
+                            <a href="GP_2.html">人員簡介</a>
                         </li>
                         <li>
-                            <a href="#">指派個管</a>
+                            <a href="GP_3.html">指派個管</a>
                         </li>
                         <li>
-                            <a href="#">兼任帳號</a>
+                            <a href="GP_4.html">兼任帳號</a>
                         </li>
                     </ul>
                 </li>
@@ -78,19 +97,19 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">記錄管理</a>
+                            <a href="CM_1.html">記錄管理</a>
                         </li>
                         <li>
-                            <a href="#">預約時間</a>
+                            <a href="CM_2.html">預約時間</a>
                         </li>
                         <li>
-                            <a href="#">空間管理</a>
+                            <a href="CM_3.html">空間管理</a>
                         </li>
                         <li>
-                            <a href="#">議題管理</a>
+                            <a href="CM_4.html">議題管理</a>
                         </li>
                         <li>
-                            <a href="#">滿意度</a>
+                            <a href="CM_5.html">滿意度</a>
                         </li>
                     </ul>
                 </li>
@@ -100,13 +119,13 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">新開發</a>
+                            <a href="TM_1.html">新開發</a>
                         </li>
                         <li>
-                            <a href="#">處理中</a>
+                            <a href="TM_2.html">處理中</a>
                         </li>
                         <li>
-                            <a href="#">查詢</a>
+                            <a href="TM_3.html">查詢</a>
                         </li>
                     </ul>
                 </li>
@@ -116,16 +135,16 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">測驗派案</a>
+                            <a href="T_1.html">測驗派案</a>
                         </li>
                         <li>
-                            <a href="#">測驗記錄</a>
+                            <a href="T_2.html">測驗記錄</a>
                         </li>
                         <li>
-                            <a href="#">測驗維護</a>
+                            <a href="T_3.html">測驗維護</a>
                         </li>
                         <li>
-                            <a href="#">測驗說明</a>
+                            <a href="T_4.html">測驗說明</a>
                         </li>
                     </ul>
                 </li>
@@ -135,10 +154,10 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">個管派案</a>
+                            <a href="GC_1.html">個管派案</a>
                         </li>
                         <li>
-                            <a href="#">關懷追蹤</a>
+                            <a href="GC_2.html">關懷追蹤</a>
                         </li>
                     </ul>
                 </li>
@@ -148,10 +167,10 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">接案管理</a>
+                            <a href="C_1.html">接案管理</a>
                         </li>
                         <li>
-                            <a href="#">紀錄管理</a>
+                            <a href="C_2.html">紀錄管理</a>
                         </li>
                     </ul>
                 </li>
@@ -161,19 +180,19 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">個案查詢</a>
+                            <a href="R_1.html">個案查詢</a>
                         </li>
                         <li>
-                            <a href="#">業務概況</a>
+                            <a href="R_2.html">業務概況</a>
                         </li>
                         <li>
-                            <a href="#">諮商統計</a>
+                            <a href="R_3.html">諮商統計</a>
                         </li>
                         <li>
-                            <a href="#">院系分析</a>
+                            <a href="R_4.html">院系分析</a>
                         </li>
                         <li>
-                            <a href="#">諮商趨勢</a>
+                            <a href="R_5.html">諮商趨勢</a>
                         </li>
                     </ul>
                 </li>
@@ -206,27 +225,16 @@
                 </li>
             </ul>
             -->
-
         </div>
         <!-- /.navbar-collapse -->
     </nav>
 
 
-    <div class="container-fluid">
-
-        <div class="row">
-
-            <?php 
-
-            if(date("d", strtotime("Monday") = date("d", strtotime("Monday")))
-               
-
-            ?>
-
-
-        </div>
-
-    </div>
+    <ol class="breadcrumb">
+        <li>
+            <a href="index.html">首頁</a>
+        </li>
+    </ol>
 
 
 </body>

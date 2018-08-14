@@ -28,7 +28,7 @@
         $(document).ready(function () {
             $("#aaa").load("couer.php");
         });
-        
+
     </SCRIPT>
 
 </head>
@@ -225,21 +225,17 @@
                 </li>
             </ul>
             -->
-
         </div>
         <!-- /.navbar-collapse -->
     </nav>
 
-    
+
     <ol class="breadcrumb">
         <li>
             <a href="index.html">首頁</a>
         </li>
-
     </ol>
-    
 
-    
 
 </body>
 
