@@ -1,3 +1,10 @@
+@extends('layouts.master')
+
+@section('title','輔導人員管理模組')
+@section('title2','值班管理')
+
+@section('content')
+
 <div class="container-fluid">
     <div class="row" style="text-align: center;">
         <div class="panel panel-info">
@@ -249,3 +256,5 @@
 
 
 </div>
+
+@endsection

@@ -28,7 +28,6 @@
         $(document).ready(function () {
             $("#aaa").load("couer.php");
         });
-
     </SCRIPT>
 
 </head>
@@ -44,7 +43,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">輔導個案管理</a>
+            <a class="navbar-brand" href="/">輔導個案管理</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -78,16 +77,16 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="GP_1.html">值班管理</a>
+                            <a href="GP_1">值班管理</a>
                         </li>
                         <li>
-                            <a href="GP_2.html">人員簡介</a>
+                            <a href="GP_2">人員簡介</a>
                         </li>
                         <li>
-                            <a href="GP_3.html">指派個管</a>
+                            <a href="GP_3">指派個管</a>
                         </li>
                         <li>
-                            <a href="GP_4.html">兼任帳號</a>
+                            <a href="GP_4">兼任帳號</a>
                         </li>
                     </ul>
                 </li>
@@ -97,19 +96,19 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="CM_1.html">記錄管理</a>
+                            <a href="CM_1">記錄管理</a>
                         </li>
                         <li>
-                            <a href="CM_2.html">預約時間</a>
+                            <a href="CM_2">預約時間</a>
                         </li>
                         <li>
-                            <a href="CM_3.html">空間管理</a>
+                            <a href="CM_3">空間管理</a>
                         </li>
                         <li>
-                            <a href="CM_4.html">議題管理</a>
+                            <a href="CM_4">議題管理</a>
                         </li>
                         <li>
-                            <a href="CM_5.html">滿意度</a>
+                            <a href="CM_5">滿意度</a>
                         </li>
                     </ul>
                 </li>
@@ -119,13 +118,13 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="TM_1.html">新開發</a>
+                            <a href="TM_1">新開發</a>
                         </li>
                         <li>
-                            <a href="TM_2.html">處理中</a>
+                            <a href="TM_2">處理中</a>
                         </li>
                         <li>
-                            <a href="TM_3.html">查詢</a>
+                            <a href="TM_3">查詢</a>
                         </li>
                     </ul>
                 </li>
@@ -135,16 +134,16 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="T_1.html">測驗派案</a>
+                            <a href="T_1">測驗派案</a>
                         </li>
                         <li>
-                            <a href="T_2.html">測驗記錄</a>
+                            <a href="T_2">測驗記錄</a>
                         </li>
                         <li>
-                            <a href="T_3.html">測驗維護</a>
+                            <a href="T_3">測驗維護</a>
                         </li>
                         <li>
-                            <a href="T_4.html">測驗說明</a>
+                            <a href="T_4">測驗說明</a>
                         </li>
                     </ul>
                 </li>
@@ -154,10 +153,10 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="GC_1.html">個管派案</a>
+                            <a href="GC_1">個管派案</a>
                         </li>
                         <li>
-                            <a href="GC_2.html">關懷追蹤</a>
+                            <a href="GC_2">關懷追蹤</a>
                         </li>
                     </ul>
                 </li>
@@ -167,10 +166,10 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="C_1.html">接案管理</a>
+                            <a href="C_1">接案管理</a>
                         </li>
                         <li>
-                            <a href="C_2.html">紀錄管理</a>
+                            <a href="C_2">紀錄管理</a>
                         </li>
                     </ul>
                 </li>
@@ -180,19 +179,19 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="R_1.html">個案查詢</a>
+                            <a href="R_1">個案查詢</a>
                         </li>
                         <li>
-                            <a href="R_2.html">業務概況</a>
+                            <a href="R_2">業務概況</a>
                         </li>
                         <li>
-                            <a href="R_3.html">諮商統計</a>
+                            <a href="R_3">諮商統計</a>
                         </li>
                         <li>
-                            <a href="R_4.html">院系分析</a>
+                            <a href="R_4">院系分析</a>
                         </li>
                         <li>
-                            <a href="R_5.html">諮商趨勢</a>
+                            <a href="R_5">諮商趨勢</a>
                         </li>
                     </ul>
                 </li>
@@ -230,12 +229,22 @@
     </nav>
 
 
+    <script>
+    </script>
+    
     <ol class="breadcrumb">
         <li>
-            <a href="index.html">首頁</a>
+            <a href="/">首頁</a>
+        </li>
+        <li>
+            <a href="/">@yield('title')</a>
+        </li>
+        <li>
+            <a href="/">@yield('title2')</a>
         </li>
     </ol>
 
+    @yield('content')
 
 </body>
 
