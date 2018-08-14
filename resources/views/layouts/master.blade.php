@@ -231,16 +231,16 @@
 
     <script>
     </script>
-    
+
     <ol class="breadcrumb">
         <li>
             <a href="/">首頁</a>
         </li>
         <li>
-            <a href="/">@yield('title')</a>
+            <a href="/">@yield('bread1')</a>
         </li>
         <li>
-            <a href="/">@yield('title2')</a>
+            <a href="/">@yield('bread2')</a>
         </li>
     </ol>
 

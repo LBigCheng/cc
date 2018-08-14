@@ -4,5 +4,5 @@
 @section('bread2',$student[$group][$num])
 
 @section('content')
-    指派各管
+
 @endsection

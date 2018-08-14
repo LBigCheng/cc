@@ -1,10 +1,14 @@
 @extends('layouts.master')
 
-@section('title','輔導人員管理模組')
-@section('title2','值班管理')
+
+@section('bread1',$student[$group][0])
+@section('bread2',$student[$group][$num])
 
 @section('content')
 
+<?php
+    print_r($student[$group][$num]);
+?>
 <div class="container-fluid">
     <div class="row" style="text-align: center;">
         <div class="panel panel-info">
