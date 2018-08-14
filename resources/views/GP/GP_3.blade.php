@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
-@section('bread1',$student[$group][0])
-@section('bread2',$student[$group][$num])
+@section('bread1',$guide[$group][0])
+@section('bread2',$guide[$group][$num])
 
 @section('content')
     指派各管

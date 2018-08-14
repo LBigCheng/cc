@@ -17,55 +17,65 @@ class TodoController extends Controller
         //
     }
 
-    public function GP($group,$num) //傳GP跟1進來
+    public function guide($group,$num) //傳GP跟1進來
     {
         //將navbar的選項丟進陣列 若有新增 直接新增陣列即可(注意索引)
-        $student['GP'][0]="輔導人員管理模組";
-        $student['GP'][1]="值班管理";
-        $student['GP'][2]="人員簡介";
-        $student['GP'][3]="指派個管";
-        $student['GP'][4]="兼任帳號";
+        $guide['GP'][0]="輔導人員管理模組";
+        $guide['GP'][1]="值班管理";
+        $guide['GP'][2]="人員簡介";
+        $guide['GP'][3]="指派個管";
+        $guide['GP'][4]="兼任帳號";
 
-        $student['CM'][0]="諮商總管";
-        $student['CM'][1]="記錄管理";
-        $student['CM'][2]="預約時間";
-        $student['CM'][3]="空間管理";
-        $student['CM'][4]="議題管理";
-        $student['CM'][5]="滿意度";
+        $guide['CM'][0]="諮商總管";
+        $guide['CM'][1]="記錄管理";
+        $guide['CM'][2]="預約時間";
+        $guide['CM'][3]="空間管理";
+        $guide['CM'][4]="議題管理";
+        $guide['CM'][5]="滿意度";
 
-        $student['TM'][0]="轉銜管理";
-        $student['TM'][1]="新開發";
-        $student['TM'][2]="處理中";
-        $student['TM'][3]="查詢";
+        $guide['TM'][0]="轉銜管理";
+        $guide['TM'][1]="新開發";
+        $guide['TM'][2]="處理中";
+        $guide['TM'][3]="查詢";
 
-        $student['T'][0]="心理測驗模組";
-        $student['T'][1]="測驗派案";
-        $student['T'][2]="測驗紀錄";
-        $student['T'][3]="測驗維護";
-        $student['T'][4]="測驗說明";
+        $guide['T'][0]="心理測驗模組";
+        $guide['T'][1]="測驗派案";
+        $guide['T'][2]="測驗紀錄";
+        $guide['T'][3]="測驗維護";
+        $guide['T'][4]="測驗說明";
 
-        $student['GC'][0]="院 / 系個案管理模組";
-        $student['GC'][1]="個管派案";
-        $student['GC'][2]="關懷追蹤";
+        $guide['GC'][0]="院 / 系個案管理模組";
+        $guide['GC'][1]="個管派案";
+        $guide['GC'][2]="關懷追蹤";
 
-        $student['C'][0]="諮商管理模組";
-        $student['C'][1]="接案管理";
-        $student['C'][2]="記錄管理";
+        $guide['C'][0]="諮商管理模組";
+        $guide['C'][1]="接案管理";
+        $guide['C'][2]="記錄管理";
 
-        $student['R'][0]="諮商總管";
-        $student['R'][1]="個案查詢";
-        $student['R'][2]="業務概況";
-        $student['R'][3]="諮商統計";
-        $student['R'][4]="院系分析";
-        $student['R'][5]="諮商趨勢";
+        $guide['R'][0]="諮商總管";
+        $guide['R'][1]="個案查詢";
+        $guide['R'][2]="業務概況";
+        $guide['R'][3]="諮商統計";
+        $guide['R'][4]="院系分析";
+        $guide['R'][5]="諮商趨勢";
+        $guide['C'][0]="諮商管理模組";
+        $guide['C'][1]="接案管理";
+        $guide['C'][2]="記錄管理";
 
-        //dd($student[$group][0].$student[$group][$num]);
-        return view($group.'.'.$group.'_'.$num,compact('student','group','num'));
+        $guide['R'][0]="諮商總管";
+        $guide['R'][1]="個案查詢";
+        $guide['R'][2]="業務概況";
+        $guide['R'][3]="諮商統計";
+        $guide['R'][4]="院系分析";
+        $guide['R'][5]="諮商趨勢";
+
+        //dd($guide[$group][0].$guide[$group][$num]);
+        return view($group.'.'.$group.'_'.$num,compact('guide','group','num'));
         // 假設是傳GP_1過來, 回傳view(GP.GP_1)(GP資料夾裡的GP_1)
-        // 後面compact('student','group','num') 將$student陣列、group、num傳回給view
+        // 後面compact('guide','group','num') 將$guide陣列、group、num傳回給view
         // view再用以下兩行將變數傳給master master接收後就可列出麵包屑
-        // @section('bread1',$student[$group][0])
-        // @section('bread2',$student[$group][$num])
+        // @section('bread1',$guide[$group][0])
+        // @section('bread2',$guide[$group][$num])
     }
 
     /**

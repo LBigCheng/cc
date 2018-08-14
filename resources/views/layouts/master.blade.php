@@ -49,11 +49,15 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
+
+                {{-- foreach第一組放這 --}}
+                {{-- todo --}}
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">學生模組
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
+                        {{-- 第二個foreach放這 --}}
                         <li>
                             <a href="#">預約個別諮商</a>
                         </li>
@@ -69,8 +73,11 @@
                         <li>
                             <a href="#">諮商滿意度</a>
                         </li>
+                        {{-- foreach第二組結尾 --}}
                     </ul>
                 </li>
+                {{-- foreach第一組結尾 --}}
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">輔導人員管理模組
                         <b class="caret"></b>
@@ -196,6 +203,8 @@
                     </ul>
                 </li>
 
+
+
             </ul>
 
             <!--
@@ -237,10 +246,11 @@
             <a href="/">首頁</a>
         </li>
         <li>
-            <a href="/">@yield('bread1')</a>
+            <a href="#">@yield('bread1')</a>
+            {{-- 其實直接用php echo guid陣列 索引[group][num] 就可以拿到值了 結果傳老半天--}}
         </li>
         <li>
-            <a href="/">@yield('bread2')</a>
+            <a href="#">@yield('bread2')</a>
         </li>
     </ol>
 
