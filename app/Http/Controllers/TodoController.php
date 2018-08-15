@@ -70,7 +70,7 @@ class TodoController extends Controller
         $guides['C'][0]="諮商管理模組";
         $guides['C'][1]="接案管理";
         $guides['C'][2]="記錄管理";
-        //dd(array_divide($guides));
+        //dd($guides);
         //dd($guides[$group][0].$guides[$group][$num]);
         return view($group.'.'.$group.'_'.$num,compact('guides','group','num'));
         // 假設是傳GP_1過來, 回傳view(GP.GP_1)(GP資料夾裡的GP_1)
