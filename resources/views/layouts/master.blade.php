@@ -48,37 +48,37 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
+
             <ul class="nav navbar-nav">
 
                 {{-- foreach第一組放這 --}}
                 {{-- todo --}}
+                @foreach($guides as $guide)
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">學生模組
-                        <b class="caret"></b>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$guide[0]}}
+                        <b class="caret"></b>{{-- 箭頭符號 --}}
                     </a>
                     <ul class="dropdown-menu">
                         {{-- 第二個foreach放這 --}}
-                        <li>
-                            <a href="#">預約個別諮商</a>
-                        </li>
-                        <li>
-                            <a href="#">預約心理測驗</a>
-                        </li>
-                        <li>
-                            <a href="#">查詢紀錄</a>
-                        </li>
-                        <li>
-                            <a href="#">更新聯絡資訊</a>
-                        </li>
-                        <li>
-                            <a href="#">諮商滿意度</a>
-                        </li>
+                        {{-- @foreach($guide as $num)
+                            @if($guide[0] != $num)
+                                <li>
+                                    <a href="#">{{$num}}</a>
+                                </li>
+                            @endif
+                        @endforeach --}}
                         {{-- foreach第二組結尾 --}}
+                        @for($i=1;$i<=count($guide)-1;$i++)
+                                <li>
+                                    <a href="#">{{$guide[$i]}}</a>
+                                </li>
+                        @endfor
                     </ul>
                 </li>
+                @endforeach
                 {{-- foreach第一組結尾 --}}
 
-                <li class="dropdown">
+                {{-- <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">輔導人員管理模組
                         <b class="caret"></b>
                     </a>
@@ -201,7 +201,7 @@
                             <a href="R_5">諮商趨勢</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
 
 

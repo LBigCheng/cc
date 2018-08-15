@@ -20,6 +20,14 @@ class TodoController extends Controller
     public function guides($group,$num) //傳GP跟1進來
     {
         //將navbar的選項丟進陣列 若有新增 直接新增陣列即可(注意索引)
+
+        $guides['S'][0]="學生模組";
+        $guides['S'][1]="預約個別諮商";
+        $guides['S'][2]="預約心理測驗";
+        $guides['S'][3]="查詢紀錄";
+        $guides['S'][4]="更新聯絡資訊";
+        $guides['S'][5]="諮商滿意度";
+
         $guides['GP'][0]="輔導人員管理模組";
         $guides['GP'][1]="值班管理";
         $guides['GP'][2]="人員簡介";
@@ -52,23 +60,17 @@ class TodoController extends Controller
         $guides['C'][1]="接案管理";
         $guides['C'][2]="記錄管理";
 
-        $guides['R'][0]="諮商總管";
+        $guides['R'][0]="查詢報表模組";
         $guides['R'][1]="個案查詢";
         $guides['R'][2]="業務概況";
         $guides['R'][3]="諮商統計";
         $guides['R'][4]="院系分析";
         $guides['R'][5]="諮商趨勢";
+
         $guides['C'][0]="諮商管理模組";
         $guides['C'][1]="接案管理";
         $guides['C'][2]="記錄管理";
-
-        $guides['R'][0]="諮商總管";
-        $guides['R'][1]="個案查詢";
-        $guides['R'][2]="業務概況";
-        $guides['R'][3]="諮商統計";
-        $guides['R'][4]="院系分析";
-        $guides['R'][5]="諮商趨勢";
-
+        //dd(array_divide($guides));
         //dd($guides[$group][0].$guides[$group][$num]);
         return view($group.'.'.$group.'_'.$num,compact('guides','group','num'));
         // 假設是傳GP_1過來, 回傳view(GP.GP_1)(GP資料夾裡的GP_1)
