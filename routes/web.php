@@ -13,6 +13,8 @@
 
 Route::get('/', 'TodoController@guides');
 
+Route::view('/test', 'layouts.test');
+
 Route::view('/master', 'layouts.master');
 
 Route::get('/{group}_{num}', 'TodoController@guides'); //gruop_num  ex:GP_1   group->GP  num->1 傳到TodoController@GP
