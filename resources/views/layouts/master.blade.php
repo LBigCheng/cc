@@ -48,16 +48,18 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-
             <ul class="nav navbar-nav">
-
-
+                {{-- guide是從TodoController@guides拿過來的陣列
+                     $key指的是 S、GP、CM...等等
+                     $guide是對應到的下拉選單內容
+                --}}
                 @foreach($guides as $key => $guide)
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$guide[0]}}
                         <b class="caret"></b>{{-- 箭頭符號 --}}
                     </a>
                     <ul class="dropdown-menu">
+                        {{-- for跑到$guide的最大索引值 停止執行 --}}
                         @for($i=1;$i<=count($guide)-1;$i++)
                                 <li>
                                     <a href="{{$key}}_{{$i}}">{{$guide[$i]}}</a>
@@ -66,35 +68,7 @@
                     </ul>
                 </li>
                 @endforeach
-
             </ul>
-
-            <!--
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#">Link</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">Action</a>
-                        </li>
-                        <li>
-                            <a href="#">Another action</a>
-                        </li>
-                        <li>
-                            <a href="#">Something else here</a>
-                        </li>
-                        <li>
-                            <a href="#">Separated link</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            -->
         </div>
         <!-- /.navbar-collapse -->
     </nav>
@@ -107,13 +81,15 @@
         <li>
             <a href="/">首頁</a>
         </li>
-        <li>
-            <a href="#">@yield('bread1')</a>
-            {{-- 其實直接用php echo guid陣列 索引[group][num] 就可以拿到值了 結果傳老半天--}}
-        </li>
-        <li>
-            <a href="#">@yield('bread2')</a>
-        </li>
+        @if($group!="0") 
+            <li>
+                <a href="">@yield('bread1')</a>
+                {{-- 其實直接用php echo guid陣列 索引[group][num] 就可以拿到值了 結果傳老半天--}}
+            </li>
+            <li>
+                <a href="{{$group}}_{{$num}}">@yield('bread2')</a>
+            </li>
+        @endif
     </ol>
 
     @yield('content')

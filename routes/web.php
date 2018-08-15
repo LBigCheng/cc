@@ -11,7 +11,7 @@
 |
 */
 
-Route::view('/', 'index');
+Route::get('/', 'TodoController@guides');
 
 Route::view('/master', 'layouts.master');
 
