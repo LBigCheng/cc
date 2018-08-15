@@ -15,5 +15,5 @@ Route::view('/', 'index');
 
 Route::view('/master', 'layouts.master');
 
-Route::get('/{group}_{num}', 'TodoController@guide'); //gruop_num  ex:GP_1   group->GP  num->1 傳到TodoController@GP
+Route::get('/{group}_{num}', 'TodoController@guides'); //gruop_num  ex:GP_1   group->GP  num->1 傳到TodoController@GP
 
