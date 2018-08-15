@@ -55,14 +55,14 @@
                 --}}
                 @foreach($guides as $key => $guide)
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$guide[0]}}
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$guide[0]}} {{$key}}
                         <b class="caret"></b>{{-- 箭頭符號 --}}
                     </a>
                     <ul class="dropdown-menu">
                         {{-- for跑到$guide的最大索引值 停止執行 --}}
                         @for($i=1;$i<=count($guide)-1;$i++)
                                 <li>
-                                    <a href="{{$key}}_{{$i}}">{{$guide[$i]}}</a>
+                                    <a href="{{$key}}_{{$i}}">．{{$guide[$i]}}</a>
                                 </li>
                         @endfor
                     </ul>
@@ -81,7 +81,7 @@
         <li>
             <a href="/">首頁</a>
         </li>
-        @if($group!="0") 
+        @if($group!="0")
             <li>
                 <a href="">@yield('bread1')</a>
                 {{-- 其實直接用php echo guid陣列 索引[group][num] 就可以拿到值了 結果傳老半天--}}
