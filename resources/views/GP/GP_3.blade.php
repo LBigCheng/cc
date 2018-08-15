@@ -28,11 +28,11 @@
           </div>
           <div class="panel-body" style= "text-align:center">   <!--todo製作學院超連結(彈出視窗)，A老師須由contr~匯進來-->
             <h4>{{$semester}}院個管<br><br></h4>
-            <h4 style="text-decoration:underline;">工程學院 ： A老師</h5>
-            <h4 style="text-decoration:underline;">電資學院 ： A老師</h5>
-            <h4 style="text-decoration:underline;">管理學院 ： A老師</h5>
-                (其餘類推)
-            <h4 style="text-decoration:underline;">未列學院 ： A老師</h5>
+            <a>工程學院</a> ： A老師<br>
+            <a>電資學院</a> ： A老師<br>
+            <a>管理學院</a> ： A老師<br>
+                (其餘類推)<br>
+            <a>未列學院</a> ： A老師<br>
           </div>
     </div>
 

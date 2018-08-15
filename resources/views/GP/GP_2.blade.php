@@ -11,10 +11,10 @@
           </div>
           <div class="panel-body" style="text-align:center;" id="GP2">
                 <form action="">
-                    <select name="" id="">
+                    <select name="" id="" style="margin-right:20px;">
                         <option value="">A老師</option>
                     </select>
-                    <input type="button" value="更新" onclick=upd()>
+                    <input type="button" value="更新" onclick=upd() class="btn btn-sm btn-warning">
                 </form>
                 <br>
                 簡介連結：開 <button onclick=changetip()>設定</button>
